@@ -65,6 +65,7 @@ class ArraySpreadsheet(BaseSpreadsheet):
         if (rowIndex >= 0 and rowIndex < self.numRows):
             self.arrSheet.insert(rowIndex, [None] * self.numCols)
             inserted = True
+            self.numRows += 1
         return inserted
 
 
@@ -78,6 +79,7 @@ class ArraySpreadsheet(BaseSpreadsheet):
             for row in self.arrSheet:
                 row.insert(colIndex, None)
             inserted = True
+            self.numCols += 1
         return inserted
 
 
