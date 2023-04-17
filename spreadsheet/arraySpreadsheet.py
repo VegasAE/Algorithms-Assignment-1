@@ -105,13 +105,6 @@ class ArraySpreadsheet(BaseSpreadsheet):
 
 
     def find(self, value: float) -> [(int, int)]:
-        """
-        Find and return a list of cells that contain the value 'value'.
-
-        @param value value to search for.
-
-        @return List of cells (row, col) that contains the input value.
-	    """
 
         # list that holds locations of cells containing desired value
         valList = []
