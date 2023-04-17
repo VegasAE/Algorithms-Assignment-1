@@ -19,6 +19,13 @@ from spreadsheet.cell import Cell
 # __copyright__ = 'Copyright 2023, RMIT University'
 # ------------------------------------------------------------------------
 
+class ListNode:
+    
+    def __init__(self, cell):
+        self.prev = None
+        self.next = None
+        self.cell = cell
+        
 class LinkedListSpreadsheet(BaseSpreadsheet):
 
     def __init__(self):
