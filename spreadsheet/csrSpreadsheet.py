@@ -73,34 +73,55 @@ class CSRSpreadsheet(BaseSpreadsheet):
 
 
     def insertCol(self, colIndex: int)->bool:
-        """
-        Inserts an empty column into the spreadsheet.
+        # bool variable to check if insertion has ocurred
+        inserted = False
 
-        @param colIndex Index of the existing column that will be after the newly inserted row.  If inserting as first column, specify colIndex to be 0.  If inserting a column after the last one, specify colIndex to be colNum()-1.
+        # check if column index is is valid
+        if (colIndex >= 0 and colIndex < len(self.sumA) - 1):
 
-        return True if operation was successful, or False if not, e.g., colIndex is invalid.
-        """
+            # increment current column and all columns after as well
+            for i, col in enumerate(self.colA):
+                if col >= colIndex:
+                    self.colA[i] += 1
+                    inserted = True
 
-        # REPLACE WITH APPROPRIATE RETURN VALUE
-        return True
+        # increase number of columns
+        self.numCols += 1
+
+        return inserted
+
 
 
 
     def update(self, rowIndex: int, colIndex: int, value: float) -> bool:
-        """
-        Update the cell with the input/argument value.
+        # bool to check for whether spreadsheet has been updated
+        updated = False
 
-        @param rowIndex Index of row to update.
-        @param colIndex Index of column to update.
-        @param value Value to update.  Can assume they are floats.
+        # check for if indexes are valid
+        if (rowIndex >= 0 and rowIndex < len(self.sumA) - 1):
+            if(colIndex >= 0 and colIndex < self.numCols):
 
-        @return True if cell can be updated.  False if cannot, e.g., row or column indices do not exist.
-        """
+                # get indices ranges
+                start, end = self.sumA[rowIndex], self.sumA[rowIndex+1]
+                for i in range(start, end):
 
-        # TO BE IMPLEMENTED
+                    # update the the value if it exists
+                    if self.colA[i] == colIndex:
+                        self.valA[i] =  value
+                        updated = True
+                        return updated
 
-        # REPLACE WITH APPROPRIATE RETURN VALUE
-        return True
+                # insert at the end of the row if the cell doesn't exist
+                self.colA.insert(end, colIndex)
+                self.valA.insert(end, value)
+
+                # increment the sum of the rows
+                for row in range(rowIndex+1, len(self.sumA)):
+                    self.sumA[row] += 1
+                updated = True
+                return updated
+
+        return updated    
 
 
     def rowNum(self)->int:
