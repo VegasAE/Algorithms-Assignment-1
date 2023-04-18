@@ -145,7 +145,7 @@ class CSRSpreadsheet(BaseSpreadsheet):
             for i in range(start, end):
                 if self.valA[i] == value:
                     valList.append((row, self.colA[i]))
-        return []
+        return valList
 
 
 
