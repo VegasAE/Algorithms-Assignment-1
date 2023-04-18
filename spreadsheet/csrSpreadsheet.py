@@ -66,7 +66,7 @@ class CSRSpreadsheet(BaseSpreadsheet):
         # check if row index is valid
         if (rowIndex >=0 and rowIndex < len(self.sumA) - 1):
            # insert new value into sumA, it will match the current value at the row index as this row is empty
-           self.sumA.insert(rowIndex, self.sumA(rowIndex))
+           self.sumA.insert(rowIndex, self.sumA[rowIndex])
            inserted = True
         
         return inserted
@@ -144,7 +144,7 @@ class CSRSpreadsheet(BaseSpreadsheet):
             start, end = self.sumA[row], self.sumA[row+1]
             for i in range(start, end):
                 if self.valA[i] == value:
-                    valList.append((row, self.col[i]))
+                    valList.append((row, self.colA[i]))
         return []
 
 

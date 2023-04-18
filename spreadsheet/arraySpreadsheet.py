@@ -24,9 +24,9 @@ class ArraySpreadsheet(BaseSpreadsheet):
         # add 1 after finished iterating through so value is not an index value.
         for cell in lCells:
             if cell.row > self.numRows:
-                self.numRows = cell.row()
+                self.numRows = cell.row
             if cell.col > self.numCols:
-                self.numCols = cell.row()
+                self.numCols = cell.row
         self.numCols += 1
         self.numRows += 1
 
