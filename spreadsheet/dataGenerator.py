@@ -25,9 +25,9 @@ from time import sleep
 # to another high density set.
 # ---------------------------------------------------
 
-smallSize = (random.randint(8, 50), random.randint(8,50))
-mediumSize = (random.randint(85, 500), random.randint(85, 500))
-largeSize = (random.randint(850, 5000), random.randint(850, 5000))
+smallSize = (random.randint(8, 20), random.randint(8, 20))
+mediumSize = (random.randint(40, 125), random.randint(40, 125))
+largeSize = (random.randint(100, 250), random.randint(100, 250))
 lowDensity = (random.uniform(0.25, 0.45))
 mediumDensity = (random.uniform(0.5, 0.7))
 highDensity = (random.uniform(0.8, 1))
