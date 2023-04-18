@@ -65,7 +65,7 @@ class CSRSpreadsheet(BaseSpreadsheet):
 
         # check if row index is valid
         if (rowIndex >=0 and rowIndex < len(self.sumA) - 1):
-           # insert new value into sumA, it will match the current value at the row index as this row is empty
+           # insert new value into sumA, it will match the current sum value at the row index as this row is empty
            self.sumA.insert(rowIndex, self.sumA[rowIndex])
            inserted = True
         
@@ -102,8 +102,8 @@ class CSRSpreadsheet(BaseSpreadsheet):
             if(colIndex >= 0 and colIndex < self.numCols):
 
                 # get indices ranges
-                start, end = self.sumA[rowIndex], self.sumA[rowIndex+1]
-                for i in range(start, end):
+                first, last = self.sumA[rowIndex], self.sumA[rowIndex+1]
+                for i in range(first, last):
 
                     # update the the value if it exists
                     if self.colA[i] == colIndex:
@@ -112,8 +112,8 @@ class CSRSpreadsheet(BaseSpreadsheet):
                         return updated
 
                 # insert at the end of the row if the cell doesn't exist
-                self.colA.insert(end, colIndex)
-                self.valA.insert(end, value)
+                self.colA.insert(last, colIndex)
+                self.valA.insert(last, value)
 
                 # increment the sum of the rows
                 for row in range(rowIndex+1, len(self.sumA)):
@@ -141,8 +141,8 @@ class CSRSpreadsheet(BaseSpreadsheet):
 
         # itterate through all rows
         for row in range(len(self.sumA) - 1):
-            start, end = self.sumA[row], self.sumA[row+1]
-            for i in range(start, end):
+            first, last = self.sumA[row], self.sumA[row+1]
+            for i in range(first, last):
                 if self.valA[i] == value:
                     valList.append((row, self.colA[i]))
         return valList
@@ -155,7 +155,7 @@ class CSRSpreadsheet(BaseSpreadsheet):
 
         # itterate through all rows
         for row in range(len(self.sumA) - 1):
-            start, end = self.sumA[row], self.sumA[row+1]
-            for i in range(start, end):
+            first, last = self.sumA[row], self.sumA[row+1]
+            for i in range(first, last):
                 nonEmptys.append(Cell(row, self.colA[i], self.valA[i]))
         return nonEmptys
