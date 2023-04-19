@@ -1,0 +1,26 @@
+Time taken to build spreadsheet: 1000 ns
+Average times for each function for Array based implementation
+Average time to append row: 4731.1 ns
+Average time to append column: 9839.5 ns
+Average time to insert row: 1196.3 ns
+Average time to insert column: 13727.0 ns
+Average time to update cell: 2224.1 ns
+Average time to find value: 2547118.0 ns
+
+Time taken to build spreadsheet: 1200 ns
+Average times for each function for Linked List based implementation
+Average time to append row: 562068.8 ns
+Average time to append column: 586532.4 ns
+Average time to insert row: 3436431.6 ns
+Average time to insert column: 412723.4 ns
+Average time to update cell: 20585.6 ns
+Average time to find value: 8435236.2 ns
+
+Time taken to build spreadsheet: 1900 ns
+Average times for each function for CSR based implementation
+Average time to append row: 154.5 ns
+Average time to append column: 153.2 ns
+Average time to insert row: 883.0 ns
+Average time to insert column: 883534.0 ns
+Average time to update cell: 3610.6 ns
+Average time to find value: 2259906.1 ns
