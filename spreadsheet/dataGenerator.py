@@ -15,29 +15,12 @@ from time import sleep
 # ---------------------------------------------------
 
 
-# File will produce a different data set everytime it is run.
-# For testing purposes, a seed will be set.
-random.seed(85)
-
-
-
-# ---------------------------------------------------
-# These variables are randomly generated to avoid
-# bias, however they will be generated once so that
-# there is consistency accross the data sets, i.e.
-# one medium sized set isn't going to have a
-# different number of rows and columns compared to
-# another medium sized set and one high density set
-# won't have a different high density (78% and 85%)
-# to another high density set.
-# ---------------------------------------------------
-
-smallSize = (random.randint(8, 20), random.randint(8, 20))
-mediumSize = (random.randint(40, 125), random.randint(40, 125))
-largeSize = (random.randint(100, 250), random.randint(100, 250))
-lowDensity = (random.uniform(0.25, 0.45))
-mediumDensity = (random.uniform(0.5, 0.7))
-highDensity = (random.uniform(0.8, 1))
+smallSize = (15, 20)
+mediumSize = (60, 125)
+largeSize = (150, 250)
+lowDensity = 0.25
+mediumDensity = 0.65
+highDensity = 0.95
 
 # small size, medium density
 def smallMedSet():
