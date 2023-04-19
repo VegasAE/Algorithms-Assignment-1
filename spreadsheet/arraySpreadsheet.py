@@ -20,16 +20,9 @@ class ArraySpreadsheet(BaseSpreadsheet):
 
     def buildSpreadsheet(self, lCells: [Cell]):
     
-        # get max number of rows / cols by finding the largest value for each cell.col and cell.row
-        # add 1 after finished iterating through so value is not an index value.
-        for cell in lCells:
-            if cell.row > self.numRows:
-                self.numRows = cell.row
-            if cell.col > self.numCols:
-                self.numCols = cell.row
-        self.numCols += 1
-        self.numRows += 1
-
+        # get max number of rows / cols by finding the largest value for each cell.col and cell.row and add one to end
+        self.numCols = max([cell.col for cell in lCells]) + 1
+        self.numRows = max([cell.row for cell in lCells]) + 1
 
         # create an empty 2D list and set the value of each position using the cells position.
         self.arrSheet = [[None for _ in range(self.numCols)] for _ in range(self.numRows)]
