@@ -48,15 +48,15 @@ def smallMedSet():
     f = open("SmallMedium.txt", 'w+')
 
     # initially add the bottom right corner of the data set (largest row and largets column)
-    f.write(f"{smallSize[0]-1} {smallSize[1]-1} {round(random.uniform(0.0, 100.0), 1)}\n")
+    f.write(f"{smallSize[0]-1} {smallSize[1]-1} {round(random.uniform(-100.0, 100.0), 1)}\n")
     numOfCells -= 1
 
     # decrease number of cells by one for each new cell created
     while numOfCells > 0:
         if (numOfCells != 1):
-            f.write(f"{random.randrange(smallSize[0]-1)} {random.randrange(smallSize[1]-1)} {round(random.uniform(0.0, 100.0), 1)}\n")
+            f.write(f"{random.randrange(smallSize[0]-1)} {random.randrange(smallSize[1]-1)} {round(random.uniform(-100.0, 100.0), 1)}\n")
         else:
-             f.write(f"{random.randrange(smallSize[0]-1)} {random.randrange(smallSize[1]-1)} {round(random.uniform(0.0, 100.0), 1)}")
+             f.write(f"{random.randrange(smallSize[0]-1)} {random.randrange(smallSize[1]-1)} {round(random.uniform(-100.0, 100.0), 1)}")
         numOfCells -= 1
 
     # close file for reading
@@ -71,15 +71,15 @@ def medLowSet():
     f = open("MediumLow.txt", 'w+')
 
     # initially add the bottom right corner of the data set (largest row and largets column)
-    f.write(f"{mediumSize[0]-1} {mediumSize[1]-1} {round(random.uniform(0.0, 100.0), 1)}\n")
+    f.write(f"{mediumSize[0]-1} {mediumSize[1]-1} {round(random.uniform(-100.0, 100.0), 1)}\n")
     numOfCells -= 1
 
     # decrease number of cells by one for each new cell created
     while numOfCells > 0:
         if (numOfCells != 1):
-            f.write(f"{random.randrange(mediumSize[0]-1)} {random.randrange(mediumSize[1]-1)} {round(random.uniform(0.0, 100.0), 1)}\n")
+            f.write(f"{random.randrange(mediumSize[0]-1)} {random.randrange(mediumSize[1]-1)} {round(random.uniform(-100.0, 100.0), 1)}\n")
         else:
-             f.write(f"{random.randrange(mediumSize[0]-1)} {random.randrange(mediumSize[1]-1)} {round(random.uniform(0.0, 100.0), 1)}")
+             f.write(f"{random.randrange(mediumSize[0]-1)} {random.randrange(mediumSize[1]-1)} {round(random.uniform(-100.0, 100.0), 1)}")
         numOfCells -= 1
 
     # close file for reading
@@ -94,15 +94,15 @@ def medMedSet():
     f = open("MediumMedium.txt", 'w+')
 
     # initially add the bottom right corner of the data set (largest row and largets column)
-    f.write(f"{mediumSize[0]-1} {mediumSize[1]-1} {round(random.uniform(0.0, 100.0), 1)}\n")
+    f.write(f"{mediumSize[0]-1} {mediumSize[1]-1} {round(random.uniform(-100.0, 100.0), 1)}\n")
     numOfCells -= 1
 
     # decrease number of cells by one for each new cell created
     while numOfCells > 0:
         if (numOfCells != 1):
-            f.write(f"{random.randrange(mediumSize[0]-1)} {random.randrange(mediumSize[1]-1)} {round(random.uniform(0.0, 100.0), 1)}\n")
+            f.write(f"{random.randrange(mediumSize[0]-1)} {random.randrange(mediumSize[1]-1)} {round(random.uniform(-100.0, 100.0), 1)}\n")
         else:
-             f.write(f"{random.randrange(mediumSize[0]-1)} {random.randrange(mediumSize[1]-1)} {round(random.uniform(0.0, 100.0), 1)}")
+             f.write(f"{random.randrange(mediumSize[0]-1)} {random.randrange(mediumSize[1]-1)} {round(random.uniform(-100.0, 100.0), 1)}")
         numOfCells -= 1
 
     # close file for reading
@@ -117,15 +117,15 @@ def medHighSet():
     f = open("MediumHigh.txt", 'w+')
 
     # initially add the bottom right corner of the data set (largest row and largets column)
-    f.write(f"{mediumSize[0]-1} {mediumSize[1]-1} {round(random.uniform(0.0, 100.0), 1)}\n")
+    f.write(f"{mediumSize[0]-1} {mediumSize[1]-1} {round(random.uniform(-100.0, 100.0), 1)}\n")
     numOfCells -= 1
 
     # decrease number of cells by one for each new cell created
     while numOfCells > 0:
         if (numOfCells != 1):
-            f.write(f"{random.randrange(mediumSize[0]-1)} {random.randrange(mediumSize[1]-1)} {round(random.uniform(0.0, 100.0), 1)}\n")
+            f.write(f"{random.randrange(mediumSize[0]-1)} {random.randrange(mediumSize[1]-1)} {round(random.uniform(-100.0, 100.0), 1)}\n")
         else:
-             f.write(f"{random.randrange(mediumSize[0]-1)} {random.randrange(mediumSize[1]-1)} {round(random.uniform(0.0, 100.0), 1)}")
+             f.write(f"{random.randrange(mediumSize[0]-1)} {random.randrange(mediumSize[1]-1)} {round(random.uniform(-100.0, 100.0), 1)}")
         numOfCells -= 1
 
     # close file for reading
@@ -140,15 +140,15 @@ def largeMedSet():
     f = open("LargeMedium.txt", 'w+')
 
     # initially add the bottom right corner of the data set (largest row and largets column)
-    f.write(f"{largeSize[0]-1} {largeSize[1]-1} {round(random.uniform(0.0, 100.0), 1)}\n")
+    f.write(f"{largeSize[0]-1} {largeSize[1]-1} {round(random.uniform(-100.0, 100.0), 1)}\n")
     numOfCells -= 1
 
     # decrease number of cells by one for each new cell created
     while numOfCells > 0:
         if (numOfCells != 1):
-            f.write(f"{random.randrange(largeSize[0]-1)} {random.randrange(largeSize[1]-1)} {round(random.uniform(0.0, 100.0), 1)}\n")
+            f.write(f"{random.randrange(largeSize[0]-1)} {random.randrange(largeSize[1]-1)} {round(random.uniform(-100.0, 100.0), 1)}\n")
         else:
-             f.write(f"{random.randrange(largeSize[0]-1)} {random.randrange(largeSize[1]-1)} {round(random.uniform(0.0, 100.0), 1)}")
+             f.write(f"{random.randrange(largeSize[0]-1)} {random.randrange(largeSize[1]-1)} {round(random.uniform(-100.0, 100.0), 1)}")
         numOfCells -= 1
 
     # close file for reading
@@ -163,15 +163,15 @@ def largeHighSet():
     f = open("LargeHigh.txt", 'w+')
 
     # initially add the bottom right corner of the data set (largest row and largets column)
-    f.write(f"{largeSize[0]-1} {largeSize[1]-1} {round(random.uniform(0.0, 100.0), 1)}\n")
+    f.write(f"{largeSize[0]-1} {largeSize[1]-1} {round(random.uniform(-100.0, 100.0), 1)}\n")
     numOfCells -= 1
 
     # decrease number of cells by one for each new cell created
     while numOfCells > 0:
         if (numOfCells != 1):
-            f.write(f"{random.randrange(largeSize[0]-1)} {random.randrange(largeSize[1]-1)} {round(random.uniform(0.0, 100.0), 1)}\n")
+            f.write(f"{random.randrange(largeSize[0]-1)} {random.randrange(largeSize[1]-1)} {round(random.uniform(-100.0, 100.0), 1)}\n")
         else:
-             f.write(f"{random.randrange(largeSize[0]-1)} {random.randrange(largeSize[1]-1)} {round(random.uniform(0.0, 100.0), 1)}")
+             f.write(f"{random.randrange(largeSize[0]-1)} {random.randrange(largeSize[1]-1)} {round(random.uniform(-100.0, 100.0), 1)}")
         numOfCells -= 1
     
     # close file for reading
