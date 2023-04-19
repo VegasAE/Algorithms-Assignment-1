@@ -9,17 +9,9 @@ import random
 import copy
 
 
-# -------------------------------------------------------------------
-# DON'T CHANGE THIS FILE.
-# This is the entry point to run the program in file-based mode.
-# It uses the data file to initialise the set of words & frequencies.
-# It takes a command file as input and output into the output file.
-# Refer to usage() for exact format of input expected to the program.
-#
-# __author__ = 'Jeffrey Chan, original file by Son Hoang Dau'
-# __copyright__ = 'Copyright 2023, RMIT University'
-# -------------------------------------------------------------------
-# Array time functions
+# change recurssion limit to allow deep copy of large sized linked lists
+sys.setrecursionlimit(50000)
+
 def testTimes():
     numOfRuns = 1000 # number of times the program will loop for timing
 

@@ -15,9 +15,9 @@ from time import sleep
 # ---------------------------------------------------
 
 
-smallSize = (15, 20)
-mediumSize = (60, 125)
-largeSize = (150, 250)
+smallSize = (20, 20)
+mediumSize = (60, 60)
+largeSize = (250, 250)
 lowDensity = 0.25
 mediumDensity = 0.65
 highDensity = 0.95
