@@ -14,6 +14,13 @@ from time import sleep
 # Densities: Low, Medium, High
 # ---------------------------------------------------
 
+
+# File will produce a different data set everytime it is run.
+# For testing purposes, a seed will be set.
+random.seed(85)
+
+
+
 # ---------------------------------------------------
 # These variables are randomly generated to avoid
 # bias, however they will be generated once so that
